@@ -101,6 +101,25 @@
 					<skip>true</skip>
 				</configuration>
 			</plugin>
+			<plugin>
+        		<groupId>org.mule.tools.maven</groupId>
+        		<artifactId>mule-maven-plugin</artifactId>
+        		<version>2.0</version>
+        		<configuration>
+            		<deploymentType>standalone</deploymentType>
+            		<muleHome>/path/to/mule/server</muleHome>
+        		</configuration>
+        		<executions>
+            		<execution>
+                		<id>deploy</id>
+                		<phase>deploy</phase>
+                		<goals>
+                    		<goal>deploy</goal>
+                		</goals>
+            		</execution>
+        		</executions>
+    		</plugin>
+			
 		</plugins>
 	</build>
 
